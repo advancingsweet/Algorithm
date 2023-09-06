@@ -15,7 +15,6 @@ typedef struct lrNode{
 lrTree CreateTree(lrTree t,datatype data)
 {
     if(t) return t;
-
     t = new lrNode;
     t->data = data;
     return t;
