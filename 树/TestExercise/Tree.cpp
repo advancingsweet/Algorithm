@@ -2,8 +2,7 @@
 
 using namespace std;
 
-typedef int datatype;
-
+typedef int datatype
 typedef struct lrNode{
 
     datatype data;
