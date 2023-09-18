@@ -1,19 +1,22 @@
 class Solution
 {
 public:
-    int searchInsert(vector<int> &nums, int target)
+    int mySqrt(int x)
     {
-        int left = -1, right = nums.size(), pos; // 有问题
-        while (left <= right)                    // 有问题
+        double left = 0, right = x + 1;
+        double mid;
+        while (left - right >= 0.000001)
         {
-            pos = left + ((right - left) / 2);
-            if (nums[pos] == target)
-                return pos;
-            else if (nums[pos] < target)
-                left = pos + 1; // 问题！
+            mid = left + (right - left) / (2 * 1.0);
+            double val = (x * 1.0) / mid;
+            if (val == mid)
+                break;
+            else if (val > mid)
+                left = mid;
             else
-                right = pos - 1; // 问题！
+                right = mid;
         }
-        return pos + 1; // 有问题
+        int val = (int)mid;
+        return val;
     }
 };
