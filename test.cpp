@@ -1,30 +1,21 @@
 class Solution
 {
 public:
-    int search(vector<int> &nums, int target)
+    int minSubArrayLen(int target, vector<int> &nums)
     {
-        int left = -1, n, right = nums.size();
-        n = right;
-        while (left + 1 != right)
+        long long s;
+        int pre = 0;
+        int length = 0, res = 0x3f3f3f3f;
+        for (int i = 0, sz = nums.size(); i < sz; i++)
         {
-            int mid = left + (right - left) / 2;
-            if (nums[mid] == target)
-                return mid;
-            if (nums[0] <= nums[mid])
+            s += nums[i];
+            while (s >= target)
             {
-                if (nums[0] <= target && target <= nums[mid])
-                    right = mid;
-                else
-                    left = mid;
-            }
-            else
-            {
-                if (nums[mid] <= target && target <= nums[n - 1])
-                    left = mid;
-                else
-                    right = mid;
+                length = i - pre + 1;
+                res = min(length, res);
+                s -= nums[pre++];
             }
         }
-        return -1;
+        return res == 0x3f3f3f3f ? 0 : res;
     }
 };
