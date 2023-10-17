@@ -10,4 +10,40 @@
 
 # 2.学习路线
 
-[1.树]()
+
+
+
+
+# 3.知识点
+
+## 1.string
+
+> 1. **stoi()**
+>
+>    > `stoi()`函数是一种常用的编程函数，用于将字符串转换为整数（string to integer）。它可以将表示数字的字符串转换为对应的整数值。
+>    >
+>    > 在大多数编程语言中，包括C++、Python和Java，`stoi()`通常是一个内置的函数或方法。它接受一个字符串作为输入，并返回一个整数。以下是Python中的示例：
+>    >
+>    > ```python
+>    > number_string = "42"
+>    > number = int(number_string)  # 使用内置的int()函数
+>    > print(number)  # 输出：42
+>    > ```
+>    >
+>    > 在这个示例中，使用内置的`int()`函数将字符串`"42"`转换为整数值`42`。在C++中，`stoi()`函数的用法类似：
+>    >
+>    > ```cpp
+>    > #include <iostream>
+>    > #include <string>
+>    > 
+>    > int main() {
+>    >     std::string number_string = "42";
+>    >     int number = std::stoi(number_string);
+>    >     std::cout << number << std::endl;  // 输出：42
+>    >     return 0;
+>    > }
+>    > ```
+>    >
+>    > 在C++中，`stoi()`函数是`<string>`库的一部分，用于将字符串转换为整数。
+>    >
+>    > 需要注意的是，如果字符串无法转换为整数，根据编程语言的不同，可能会抛出异常或错误。在编写代码时，需要适当处理这些情况。
